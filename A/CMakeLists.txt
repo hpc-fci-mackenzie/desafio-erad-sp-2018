@@ -7,7 +7,7 @@ if ("${CMAKE_C_COMPILER_ID}" MATCHES "Cray")
 elseif ("${CMAKE_C_COMPILER_ID}" MATCHES "Intel")
   set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fast -Wall")
 elseif ("${CMAKE_C_COMPILER_ID}" MATCHES "GNU")
-  set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=native -Wall")
+  set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=native -ffast-math -fno-cx-limited-range -funroll-loops --param max-unroll-times=2 -Wall")
 endif()
 message(STATUS "Enabling optimization flags for ${CMAKE_C_COMPILER_ID} Compiler: ${CMAKE_C_FLAGS}")
 
