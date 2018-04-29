@@ -1,2 +1,1 @@
-# desafio-eradsp2018
-Desafio ERADSP-2018
+# Desafio de Programacao Paralela - ERAD-SP 2018
