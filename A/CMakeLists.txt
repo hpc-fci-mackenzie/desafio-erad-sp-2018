@@ -1,5 +1,11 @@
-cmake_minimum_required(VERSION 3.5.2)
+cmake_minimum_required (VERSION 3.5.2)
 project (barra)
-set(CMAKE_BUILD_TYPE Release)
+set (CMAKE_BUILD_TYPE Release)
 
-add_executable(barra barra.c)
+if ("${CMAKE_C_COMPILER_ID}" MATCHES "Cray")
+  set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -h msglevel_3")
+else()
+  set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
+endif()
+
+add_executable (barra barra.c)
