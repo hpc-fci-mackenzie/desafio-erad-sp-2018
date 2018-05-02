@@ -3,3 +3,5 @@ project (barra)
 set (CMAKE_BUILD_TYPE Release)
 
 add_executable (barra barra.c)
+
+install (TARGETS barra DESTINATION .)

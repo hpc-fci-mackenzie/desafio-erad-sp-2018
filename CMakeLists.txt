@@ -1,4 +1,5 @@
 cmake_minimum_required (VERSION 3.5.2)
+project (Problems)
 set (CMAKE_BUILD_TYPE Release)
 
 # Option to choose Probem(s)
@@ -36,4 +37,3 @@ elseif ("${PROBLEM}" MATCHES "B")
 else()
   message (FATAL_ERROR "Problem '${PROBLEM}' not recognized")
 endif()
-

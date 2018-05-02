@@ -3,3 +3,5 @@ project (soma)
 set (CMAKE_BUILD_TYPE Release)
 
 add_executable (soma soma.c)
+
+install (TARGETS soma DESTINATION .)
